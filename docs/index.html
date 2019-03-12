@@ -221,6 +221,12 @@
 
             </li>
 
+            <li><a href='#performance' class="">
+              Performance 
+            </a>
+          </li>
+
+
           </ul>
         </div>
         <div class='mt1 h6 quiet'>
@@ -2302,18 +2308,12 @@ model.read({ <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'
 
 
       <section class='p2 mb2 clearfix bg-white minishadow'>
-
-
         <div class='clearfix'>
 
           <h3 class='fl m0' id='view'>
             View
           </h3>
-
-
         </div>
-
-
         <p>View that abstracts away the browser's DOM completely.
           It has two simple entry points:</p>
         <ul>
@@ -2324,17 +2324,6 @@ model.read({ <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'
         </ul>
 
         <div class='pre p1 fill-light mt0'>new View(template: any)</div>
-
-
-
-
-
-
-
-
-
-
-
         <div class='py1 quiet mt1 prose-big'>Parameters</div>
         <div class='prose'>
 
@@ -2347,29 +2336,49 @@ model.read({ <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'
           </div>
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       </section>
 
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
 
+          <h3 class='fl m0' id='performance'>
+            Performance
+          </h3>
+        </div>
+        <p>PageSpeed which is offered by <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">google developers </a>being used here</p>
+
+        <div class='py1 quiet mt1 prose-big'><a href="http://todolistme.net/" target="_blank">Competitor site</a></div>
+
+        <p>The lab data section shows:</p>
+        <ul>
+          <li>First CPU idle is 8.7s which is bad since First CPU Idle marks the first time at which the page's main thread is quiet enough to handle input</li>
+          <li>Time to Interactive is 9.3 and that's long as Time to interactive is the amount of time it takes for the page to become fully interactive.  </li>
+          <li> Estimated Input Latency is 180ms and that's long too as Estimated Input Latency is an estimate of how long your app takes to respond to user input, in milliseconds, during the busiest 5s window of page load. If your latency is higher than 50 ms, users may perceive your app as laggy. 
+          </li>
+        </ul>
+
+        <p>The Opportunities section shows the areas which can be improved in the site</p>
+        <ol>
+          <li>Instead of using PNG or JPEG (like intexture.png) we used formats  JPEG 2000, JPEG XR, and WebP often provide better compression than PNG or JPEG, which means faster downloads and less data consumption.</li>
+          <li>Minifying JavaScript files can reduce payload sizes and script parse time. </li>
+          <li>Remove unused rules from stylesheets to reduce unnecessary bytes consumed by network activity. L</li>
+        </ol>
+
+        <p>The lab Diagnostics section shows:</p>
+        <ul>
+          <li>We can minimize main-thread work and reduce JS execution time by Considering reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this.
+            </li>
+          <li>Serve static assets with an efficient cache policy beacuse a long cache lifetime can speed up repeat visits to your page.</li>
+          <li>Minimize Critical Requests Depth because The Critical Request Chains below show you what resources are loaded with a high priority. Consider reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load. </li>
+        </ul>
+      </section>
 
     </div>
   </div>
+
+
+
+
   <script src='assets/anchor.js'></script>
   <script src='assets/split.js'></script>
   <script src='assets/site.js'></script>
